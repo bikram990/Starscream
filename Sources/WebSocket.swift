@@ -431,7 +431,7 @@ open class WebSocket : NSObject, StreamDelegate, WebSocketClient, WSStreamDelega
         var compressor:Compressor? = nil
     }
     
-    private var stream: WSStream
+    private(set) public var stream: WSStream
     private var connected = false
     private var isConnecting = false
     private let mutex = NSLock()
